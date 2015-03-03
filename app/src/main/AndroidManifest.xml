@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.amit.project" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_home">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"></meta-data>
+        </activity>
+        <activity
+            android:name=".contests"
+            android:label="@string/title_activity_contests" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"></meta-data>
+        </activity>
+        <activity
+            android:name=".profile"
+            android:label="@string/title_activity_profile" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"></meta-data>
+        </activity>
+        <activity
+            android:name=".tips"
+            android:label="@string/title_activity_tips" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"></meta-data>
+        </activity>
+        <activity
+            android:name=".developers"
+            android:label="@string/title_activity_developers" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"></meta-data>
+        </activity>
+        <activity
+            android:name=".about"
+            android:label="@string/title_activity_about" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"></meta-data>
+        </activity>
+    </application>
+
+</manifest>
