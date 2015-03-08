@@ -7,11 +7,62 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <string name="title_activity_home">home</string>
-    <string name="title_activity_contests">contests</string>
-    <string name="title_activity_profile">profile</string>
-    <string name="title_activity_tips">tips</string>
-    <string name="title_activity_developers">developers</string>
-    <string name="title_activity_about">about</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_contests">Contests</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_tips">Question of The Day</string>
+    <string name="title_activity_developers">Developers</string>
+    <string name="title_activity_about">Credits</string>
+    <string name="name1">Amit Goel (IT)</string>
+    <string name="name2">Pulkit Garg (CS)</string>
+    <string name="name3">Shubham (CS)</string>
+    <string name="name4">Jagriti (IT)</string>
+    <string name="year">2nd Year</string>
+    <string name="ty">Thank You.</string>
+    <string name="sp">Special Thanks to</string>
+    <string name="tb">Team Technobyte</string>
+    <string name="ty_text">We would like to thank the following websites for extending their support to us.</string>
+    <string name="tips">
+*Every Morning you will get a notification popup which will help you develop a new concept in the world of programming.\n
+        *With these tips you will get to develop some extra skills that you might not get anywhere else.</string>
+    <string name="tip">Tips:-</string>
+    <string name="contests_notify">*Along with the tips you will get information regarding the contests on that day.</string>
+    <string name="contests">Contests:-</string>
+    <string name="allow">Allow Them</string>
+
+
+
+
+     <string name="intro_message">Welcome to <b>Scheduler</b>!
+        This sample demonstrates how you can schedule an alarm that causes a service to
+        be started. This is useful when you want to schedule alarms that initiate
+        long-running operations. Click START ALARM to activate an alarm to check
+        the Google home page for a custom doodle once a day. If the app finds a doodle,
+        it posts a \"Doodle Alert\" as a notification. Click CANCEL ALARM to cancel the
+        alarm. Once the alarm is active, it automatically restarts when the device is
+        rebooted.</string>
+    <string name="start_text">Start Alarm</string>
+    <string name="cancel_text">Cancel Alarm</string>
+    <string name="doodle_alert">Doodle Alert</string>
+    <string name="doodle_found">There is a Google doodle today!!</string>
+    <string name="no_doodle">No Google doodle today.</string>
+    <string name="connection_error">Connection error.</string>
+    <string name="un">Username</string>
+    <string name="noq">Number Of Questions Seen:-</string>
+    <string name="o">0</string>
+    <string name="lp">Lets Start Playing...</string>
+    <string name="main">
+There are many platforms available for you to learn, improve and develop your coding skills.\n
+To get you started with, there is:\n
+1.) CodeChef ( a Directi initiative ) which holds monthly 3 contests:\n
+	\t\ta) Long Challenge\n
+	\t\tb) Short Challenge\n
+	\t\tc) Lunch time\n
+	apart from many other college level contests.\n
+2.) Codeforces which also holds short contests very frequently. It holds contests seperately for newbies/learners having less rating and seperately from Advanced programmers.\n
+3.) SPOJ which have a vast number of good problems to deal with.\n
+4.) TopCoder where you can earn also :P\n
+
+Links can be found in credits......</string>
 
 </resources>

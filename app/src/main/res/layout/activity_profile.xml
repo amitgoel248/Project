@@ -8,10 +8,66 @@
         android:id="@+id/app_bar"
         layout="@layout/app_bar"></include>
 
+   <ImageView
+       android:id="@+id/image"
+       android:layout_below="@+id/app_bar"
+       android:layout_width="170dp"
+       android:layout_height="170dp"
+       android:layout_centerHorizontal="true"
+       android:src="@drawable/ic_person"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/image"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardBackgroundColor="#A985C9"
+        />
     <TextView
-        android:layout_below="@+id/app_bar"
+        android:layout_marginTop="25dp"
+        android:id="@+id/amit1"
+        android:layout_below="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/un"
+        android:textSize="34dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textStyle="italic"
+        android:id="@+id/textt"
+        android:layout_below="@+id/card_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/noq"
+        android:textSize="25dp"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/textt"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view6"
+        android:layout_centerHorizontal="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardBackgroundColor="#A985C9"
+        />
+    <TextView
+        android:layout_below="@+id/textt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_activity_profile" />
+        android:text="@string/o"
+        android:textSize="80dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
 
 </RelativeLayout>

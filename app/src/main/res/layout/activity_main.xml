@@ -5,7 +5,8 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#ffffff">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,12 +15,27 @@
         <include
             android:id="@+id/app_bar"
             layout="@layout/app_bar"></include>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/imager"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/app_bar"
-            android:text="@string/hello_world" />
+            android:src="@drawable/ic_launcherrrr"
+            android:layout_below="@+id/app_bar"/>
+        <Button
+            android:layout_below="@+id/imager"
+            android:id="@+id/button1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Alarm"
+            android:onClick="startAlarm" />
+
+        <Button
+            android:layout_below="@+id/button1"
+            android:id="@+id/button2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel Alarm"
+            android:onClick="cancelAlarm" />
 
     </RelativeLayout>
 
@@ -32,5 +48,7 @@
          android:name="com.project.amit.project.NavigationDrawerFragment"
          tools:layout="@layout/fragment_navigation_drawer"
        ></fragment>
+
+
 
 </android.support.v4.widget.DrawerLayout>

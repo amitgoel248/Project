@@ -25,6 +25,7 @@ import java.util.List;
 public class NavigationDrawerFragment extends Fragment implements adapter_nav.ClickListener{
 
 
+
     private RecyclerView recyclerView;
     public static final String PREF_FILE_NAME ="testpref";
     public static final String KEY_USER_LEARNED_DRAWER ="user_learned_drawer";
@@ -67,7 +68,7 @@ public class NavigationDrawerFragment extends Fragment implements adapter_nav.Cl
     {
         List<Information_nav> data=new ArrayList<>();
         int[] icons={R.drawable.ic_action_slideshow,R.drawable.ic_action_person,R.drawable.ic_action_important,R.drawable.ic_action_place,R.drawable.ic_action_about,R.drawable.ic_action_cc_bcc};
-        String[] titles={"Home","Profile","Contests","Tips","About","Developers"};
+        String[] titles={"Home","Profile","Contests","Question of The Day","Credits","Developers"};
         for(int i=0;i<titles.length && i<icons.length;i++)
         {
            Information_nav current=new Information_nav();
@@ -137,9 +138,9 @@ public class NavigationDrawerFragment extends Fragment implements adapter_nav.Cl
         else if(position==2)
              startActivity(new Intent(getActivity(),contests.class));
          else if(position==3)
-             startActivity(new Intent(getActivity(),tips.class));
+             startActivity(new Intent(getActivity(),Notifications.class));
          else if(position==4)
-             startActivity(new Intent(getActivity(),about.class));
+             startActivity(new Intent(getActivity(),credits.class));
          else if(position==5)
              startActivity(new Intent(getActivity(),developers.class));
     }

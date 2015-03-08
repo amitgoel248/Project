@@ -8,10 +8,39 @@
         android:id="@+id/app_bar"
         layout="@layout/app_bar"></include>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardBackgroundColor="#A985C9"
+        />
     <TextView
-        android:layout_below="@+id/app_bar"
+        android:layout_marginTop="25dp"
+        android:id="@+id/amit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lp"
+        android:textSize="34dp"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_below="@+id/card_view1"
+        android:textStyle="italic"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_activity_contests" />
-
+        android:text="@string/main"
+        />
+        ></RelativeLayout>
+    ></ScrollView>
 </RelativeLayout>
