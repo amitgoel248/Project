@@ -6,36 +6,103 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#ffffff">
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#ffffff">
 
         <include
             android:id="@+id/app_bar"
             layout="@layout/app_bar"></include>
+
         <ImageView
+            android:layout_below="@+id/app_bar"
             android:id="@+id/imager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_launcherrrr"
-            android:layout_below="@+id/app_bar"/>
-        <Button
+            />
+        <View
+            android:id="@+id/line"
             android:layout_below="@+id/imager"
-            android:id="@+id/button1"
-            android:layout_width="fill_parent"
+            android:layout_width="250dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorHighlight"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+
+
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+            android:background="@drawable/bacj">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start Alarm"
+            android:id="@+id/maintext1"
+            android:layout_below="@+id/line"
+            android:text="@string/maintext"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:textColor="#000000"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:id="@+id/line2"
+            android:layout_below="@+id/maintext1"
+            android:layout_width="250dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorHighlight"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/up"
+            android:layout_below="@+id/line2"
+            android:text="@string/up2"
+            android:textSize="25dp"
+            android:textStyle="italic|bold"
+            android:textColor="#000000"/>
+
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/up"
+            android:id="@+id/button1"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:text="Enable Notifications"
             android:onClick="startAlarm" />
 
         <Button
-            android:layout_below="@+id/button1"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/up"
+            android:layout_marginLeft="191dp"
             android:id="@+id/button2"
-            android:layout_width="fill_parent"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:text="Cancel Alarm"
+            android:text="Disable Notifications"
             android:onClick="cancelAlarm" />
+         </RelativeLayout>
+        </ScrollView>
 
     </RelativeLayout>
 

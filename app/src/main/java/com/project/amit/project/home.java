@@ -17,8 +17,7 @@ import java.sql.SQLException;
 
 public class home extends ActionBarActivity {
 
-    DbaseAdapter dbasehelper;
-    DbaseAdapter.Dbasehelper helper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,25 +27,8 @@ public class home extends ActionBarActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        dbasehelper =new DbaseAdapter(this);
-
-        helper =new DbaseAdapter.Dbasehelper(this);
-        try {
-            helper.createDataBase();
-        } catch (IOException e) {
-            throw new Error("Unable to create database");
-        }
-        try {
-            helper.openDataBase();
-        } catch (SQLException e) {
-            //
-        }
     }
 
-    public void viewDetails(View view){
-        String data=dbasehelper.getAllData();
-        Message.message(this,data);
-    }
 
 
     @Override

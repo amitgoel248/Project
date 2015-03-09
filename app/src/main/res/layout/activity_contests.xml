@@ -11,19 +11,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/app_bar">
+        android:layout_below="@+id/app_bar"
+        android:background="@drawable/bacj">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view1"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        card_view:cardCornerRadius="4dp"
-        card_view:cardBackgroundColor="#A985C9"
-        />
     <TextView
         android:layout_marginTop="25dp"
         android:id="@+id/amit1"
@@ -32,15 +24,30 @@
         android:text="@string/lp"
         android:textSize="34dp"
         android:gravity="center"
+        android:layout_marginBottom="10dp"
         />
-    <TextView
-        android:layout_below="@+id/card_view1"
+            <View
+                android:id="@+id/line"
+                android:layout_below="@+id/amit1"
+                android:layout_width="250dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorHighlight"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+        android:layout_below="@+id/line"
         android:textStyle="italic"
         android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main"
+        android:textColor="#000000"
         />
-        ></RelativeLayout>
+        </RelativeLayout>
     ></ScrollView>
 </RelativeLayout>

@@ -18,6 +18,8 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.widget.Toolbar;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Calendar;
 
 
@@ -40,6 +42,7 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
        NavigationDrawerFragment drawerFragment =(NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setup(R.id.fragment_navigation_drawer,(DrawerLayout)findViewById(R.id.drawer_layout), toolbar);
+
 
 
     }
@@ -69,16 +72,16 @@ public class MainActivity extends ActionBarActivity {
 
     public void startAlarm(View view) {
         manager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        int interval = 600000; // 600 seconds
+        int interval = 20000; // 20 seconds
 
         manager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval, pendingIntent);
-        Toast.makeText(this, "Alarm Set", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Notifications Enabled", Toast.LENGTH_SHORT).show();
     }
 
     public void cancelAlarm(View view) {
         if (manager != null) {
             manager.cancel(pendingIntent);
-            Toast.makeText(this, "Alarm Canceled", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Notifications Disabled", Toast.LENGTH_SHORT).show();
         }
     }
 

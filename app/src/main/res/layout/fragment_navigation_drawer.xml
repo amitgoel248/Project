@@ -12,9 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/ic_launcherr"/>
+    <View
+        android:id="@+id/line"
+        android:layout_below="@+id/image"
+        android:layout_width="250dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorHighlight"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
 
     <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/image"
+        android:layout_below="@+id/line"
         android:id="@+id/drawerList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

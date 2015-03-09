@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Project</string>
+    <string name="app_name">DCOD</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <string name="title_activity_home">Home</string>
+    <string name="title_activity_home">Levels</string>
     <string name="title_activity_contests">Contests</string>
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_tips">Question of The Day</string>
@@ -29,7 +29,8 @@
     <string name="contests_notify">*Along with the tips you will get information regarding the contests on that day.</string>
     <string name="contests">Contests:-</string>
     <string name="allow">Allow Them</string>
-
+    <string name="maintext">Description:\n\nThe aim of this app is to help beginners know the basics required to get comfortable with competitive programming. When a person starts competitive programming, he generally gets confused from where to start, thats where the role of this app comes.
+The questions are divided in 12 parts, each focussing on a particular skillset required for a good programmer to know. To help new budding hackers :p , we have included a daily pop-up reminder which will give them a question sorted in a particular order to get them on the track.\n\nDaily a pop will come at 9:00 am, user can enable and disable the pop-up notifications with the buttons provided below.</string>
 
 
 
@@ -52,17 +53,22 @@
     <string name="o">0</string>
     <string name="lp">Lets Start Playing...</string>
     <string name="main">
-There are many platforms available for you to learn, improve and develop your coding skills.\n
-To get you started with, there is:\n
-1.) CodeChef ( a Directi initiative ) which holds monthly 3 contests:\n
+There are many platforms available for you to learn, improve and develop your coding skills.\n\n
+To get you started with, there is:\n\n
+1.) CodeChef ( a Directi initiative ) which holds monthly 3 contests:\n\n
 	\t\ta) Long Challenge\n
 	\t\tb) Short Challenge\n
 	\t\tc) Lunch time\n
-	apart from many other college level contests.\n
-2.) Codeforces which also holds short contests very frequently. It holds contests seperately for newbies/learners having less rating and seperately from Advanced programmers.\n
-3.) SPOJ which have a vast number of good problems to deal with.\n
-4.) TopCoder where you can earn also :P\n
+	apart from many other college level contests.\n\n
+2.) Codeforces which also holds short contests very frequently. It holds contests for separately newbies/learners having less rating and for Advanced programmers.\n\n
+3.) SPOJ which have a vast number of good problems to deal with.\n\n
+4.) TopCoder where you can earn also :P\n\n
 
-Links can be found in credits......</string>
+Links can be found in credits......\n\n</string>
+    <string name="up2">Its up to You...</string>
+    <string name="save">save</string>
+    <string name="qod">To view Today\'s Question press Enter</string>
+    <string name="qod2">Question\'s CODE is</string>
+    <string name="link">Link is:-</string>
 
 </resources>

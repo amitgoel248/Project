@@ -17,7 +17,6 @@ public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent arg1) {
         // For our recurring task, we'll just display a message
-        Toast.makeText(context, "I'm running", Toast.LENGTH_SHORT).show();
 
         mNotificationManager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
         Notification notifyDetails = new Notification(R.drawable.q,"Question Of The Day!",System.currentTimeMillis());

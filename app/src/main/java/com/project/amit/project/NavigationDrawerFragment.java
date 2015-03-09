@@ -67,8 +67,8 @@ public class NavigationDrawerFragment extends Fragment implements adapter_nav.Cl
     public static List<Information_nav> getdata()
     {
         List<Information_nav> data=new ArrayList<>();
-        int[] icons={R.drawable.ic_action_slideshow,R.drawable.ic_action_person,R.drawable.ic_action_important,R.drawable.ic_action_place,R.drawable.ic_action_about,R.drawable.ic_action_cc_bcc};
-        String[] titles={"Home","Profile","Contests","Question of The Day","Credits","Developers"};
+        int[] icons={R.drawable.ic_action_slideshow,R.drawable.ic_action_person,R.drawable.ic_action_important,R.drawable.ic_action_about,R.drawable.ic_action_cc_bcc};
+        String[] titles={"Home","Profile","Contests","Credits","Developers"};
         for(int i=0;i<titles.length && i<icons.length;i++)
         {
            Information_nav current=new Information_nav();
