@@ -15,44 +15,41 @@ import java.io.OutputStream;
  * Created by pulkit on 07-03-2015.
  */
 
-public class DbaseAdapter {
+public class DbaseAdapter2 {
     Dbasehelper helper;
 
-    public DbaseAdapter(Context context){
+    public DbaseAdapter2(Context context){
         helper=new Dbasehelper(context);
     }
-    public String getAllData(int UID){
-        SQLiteDatabase db = helper.getWritableDatabase();
-
-        String[] columns = {Dbasehelper.UID,Dbasehelper.LINK};
-        Cursor cursor = db.query(Dbasehelper.TABLE_NAME, columns, Dbasehelper.UID+"='"+UID+"'", null, null, null, null);
-        StringBuffer buffer = new StringBuffer();
-        while (cursor.moveToNext()) {
-            int index1 = cursor.getColumnIndex(Dbasehelper.UID);
-            int index2 = cursor.getColumnIndex(Dbasehelper.LINK);
-            int index3 = cursor.getColumnIndex(Dbasehelper.DESCRIPTION);
-            int cid = cursor.getInt(index1);
-            String des = cursor.getString(index2);
-            String des3 = cursor.getString(index3);
-            buffer.append(cid + " " + des + "\n" + " " + des3 + "\n");
-        }
-        return buffer.toString();
-    }
+//    public String getAllData(int UID){
+//        SQLiteDatabase db = helper.getWritableDatabase();
+//
+//        String[] columns = {Dbasehelper.UID,Dbasehelper.NAME};
+//        Cursor cursor = db.query(Dbasehelper.TABLE_NAME, columns, Dbasehelper.UID+"='"+UID+"'", null, null, null, null);
+//        StringBuffer buffer = new StringBuffer();
+//        while (cursor.moveToNext()) {
+//            int index1 = cursor.getColumnIndex(Dbasehelper.UID);
+//            int index2 = cursor.getColumnIndex(Dbasehelper.NAME);
+//            int cid = cursor.getInt(index1);
+//            String des = cursor.getString(index2);
+//            buffer.append(cid + " " + des + "\n");
+//        }
+//        return buffer.toString();
+//    }
 
 
     public String getData(int UID)
     {
         SQLiteDatabase db = helper.getWritableDatabase();
+
         String[] columns = {Dbasehelper.UID,Dbasehelper.NAME};
         Cursor cursor = db.query(Dbasehelper.TABLE_NAME, columns, Dbasehelper.UID+"='"+UID+"'", null, null, null, null);
         StringBuffer buffer = new StringBuffer();
         while (cursor.moveToNext()) {
             int index1 = cursor.getColumnIndex(Dbasehelper.UID);
             int index2 = cursor.getColumnIndex(Dbasehelper.NAME);
-
             int cid = cursor.getInt(index1);
             String des = cursor.getString(index2);
-
             buffer.append(des);
         }
         return buffer.toString();
@@ -61,33 +58,15 @@ public class DbaseAdapter {
     {
         SQLiteDatabase db = helper.getWritableDatabase();
 
-        String[] columns = {Dbasehelper.UID,Dbasehelper.LINK,Dbasehelper.DESCRIPTION};
+        String[] columns = {Dbasehelper.UID,Dbasehelper.NAME};
         Cursor cursor = db.query(Dbasehelper.TABLE_NAME, columns, Dbasehelper.UID+"='"+UID+"'", null, null, null, null);
         StringBuffer buffer = new StringBuffer();
         while (cursor.moveToNext()) {
             int index1 = cursor.getColumnIndex(Dbasehelper.UID);
-            int index2 = cursor.getColumnIndex(Dbasehelper.LINK);
-            int index3 = cursor.getColumnIndex(Dbasehelper.DESCRIPTION);
+            int index2 = cursor.getColumnIndex(Dbasehelper.NAME);
             int cid = cursor.getInt(index1);
             String des = cursor.getString(index2);
-            String des3 = cursor.getString(index3);
-            buffer.append(des + "\n");
-        }
-        return buffer.toString();
-    }
-    public String getString1(int UID)
-    {
-        SQLiteDatabase db = helper.getWritableDatabase();
-
-        String[] columns = {Dbasehelper.UID,Dbasehelper.DESCRIPTION};
-        Cursor cursor = db.query(Dbasehelper.TABLE_NAME, columns, Dbasehelper.UID+"='"+UID+"'", null, null, null, null);
-        StringBuffer buffer = new StringBuffer();
-        while (cursor.moveToNext()) {
-            int index1 = cursor.getColumnIndex(Dbasehelper.UID);
-            int index3 = cursor.getColumnIndex(Dbasehelper.DESCRIPTION);
-            int cid = cursor.getInt(index1);
-            String des3 = cursor.getString(index3);
-            buffer.append(des3 + "\n");
+            buffer.append(des);
         }
         return buffer.toString();
     }
@@ -95,14 +74,13 @@ public class DbaseAdapter {
 
 
     static class Dbasehelper extends SQLiteOpenHelper {
-        private static final String DATABASE_NAME = "question.db";
+        private static final String DATABASE_NAME = "testdatabase";
         private static final String DB_PATH = "/data/data/com.project.amit.project/databases/";
-        private static final String TABLE_NAME = "quest";
+        private static final String TABLE_NAME = "Tips";
         private static final int DATABASE_VERSION = 31;
         private static final String UID = "_id";
-        private static final String LINK = "link";
-        private static final String NAME = "title";
-        private static final String DESCRIPTION="description";
+        //private static final String LINK = "link";
+        private static final String NAME = "Description";
         private Context context;
         private SQLiteDatabase myDataBase;
 

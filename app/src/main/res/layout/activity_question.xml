@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.amit.project.Notifications"
+    android:background="@drawable/bacj">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:background="@drawable/bacj">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/nm1"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/qod"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="#000000"/>
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/nm2"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/nm1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/qod2"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/nm3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nm2"
+                />
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/nm4"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/nm3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/link"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:textColor="#303F9F"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/nm5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nm4"
+                />
+
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/nm6"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/nm5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question is:-"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/nm7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nm6"
+                />
+
+            <TextView
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:id="@+id/nm8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nm7"
+                android:text="Add this to..."
+                />
+
+            <Button
+
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="Todo"
+                android:layout_below="@id/nm8"
+                android:id="@+id/bt8"
+                />
+
+
+        </RelativeLayout>
+        ></ScrollView>
+
+</RelativeLayout>

@@ -21,7 +21,7 @@ public class developers extends ActionBarActivity {
         Toolbar toolbar=(Toolbar)findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         ImageView img = (ImageView)findViewById(R.id.fb1);
         img.setOnClickListener(new View.OnClickListener(){

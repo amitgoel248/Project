@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="primarycolor" >#6A1B9A</color>
-    <color name="primarycolordark">#9C27B0</color>
-    <color name="accentcolor">#E91E63</color>
-    <color name="primarycoloricon">#BA68C8</color>
+    <color name="primarycolor" >#F44336</color>
+    <color name="primarycolordark">#E64A19</color>
+    <color name="accentcolor">#7C4DFF</color>
+    <color name="primarycoloricon">#FFCCBC</color>
     <color name="colorHighlight">#B6B6B6</color>
+    <color name="newin">#00BCD4</color>
 </resources>

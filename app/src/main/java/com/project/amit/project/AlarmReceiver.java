@@ -23,7 +23,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         PendingIntent myIntent = PendingIntent.getActivity(context, 0, new Intent(context, Notifications.class), 0);
         notifyDetails.setLatestEventInfo(context,"Question Of The Day!","Click to view the question", myIntent);
         notifyDetails.flags |= Notification.FLAG_AUTO_CANCEL;
-
         mNotificationManager.notify(SIMPLE_NOTFICATION_ID, notifyDetails);
 
 

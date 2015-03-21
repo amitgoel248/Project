@@ -27,12 +27,15 @@ public class MainActivity extends ActionBarActivity {
 
     private PendingIntent pendingIntent;
     private AlarmManager manager;
+    public static int pass=0;
 
     private android.support.v7.widget.Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if(pass==0)
+        startActivity(new Intent(this,tips.class));
 
         Intent alarmIntent = new Intent(this, AlarmReceiver.class);
         pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent, 0);
@@ -42,12 +45,16 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
        NavigationDrawerFragment drawerFragment =(NavigationDrawerFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setup(R.id.fragment_navigation_drawer,(DrawerLayout)findViewById(R.id.drawer_layout), toolbar);
-
-
+         pass=1;
 
     }
 
+    public void onSaveInstanceState(Bundle savedInstanceState) {
 
+        pass=1;
+        super.onSaveInstanceState(savedInstanceState);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -72,7 +79,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void startAlarm(View view) {
         manager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        int interval = 20000; // 20 seconds
+        int interval = 120000; // 120 seconds
 
         manager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval, pendingIntent);
         Toast.makeText(this, "Notifications Enabled", Toast.LENGTH_SHORT).show();

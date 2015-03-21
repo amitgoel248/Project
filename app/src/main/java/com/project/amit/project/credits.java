@@ -21,7 +21,7 @@ public class credits extends ActionBarActivity {
         Toolbar toolbar=(Toolbar)findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         ImageView img = (ImageView)findViewById(R.id.cc);
         img.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){

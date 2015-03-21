@@ -67,8 +67,8 @@ public class NavigationDrawerFragment extends Fragment implements adapter_nav.Cl
     public static List<Information_nav> getdata()
     {
         List<Information_nav> data=new ArrayList<>();
-        int[] icons={R.drawable.ic_action_slideshow,R.drawable.ic_action_person,R.drawable.ic_action_important,R.drawable.ic_action_about,R.drawable.ic_action_cc_bcc};
-        String[] titles={"Home","Profile","Contests","Credits","Developers"};
+        int[] icons={R.drawable.ic_action_slideshow,R.drawable.ic_action_important,R.drawable.ic_action_place,R.drawable.ic_action_view_as_list,R.drawable.ic_action_about,R.drawable.ic_action_cc_bcc};
+        String[] titles={"Levels","Contests","Question of the day","Todo","Credits","Developers"};
         for(int i=0;i<titles.length && i<icons.length;i++)
         {
            Information_nav current=new Information_nav();
@@ -134,11 +134,11 @@ public class NavigationDrawerFragment extends Fragment implements adapter_nav.Cl
          if(position==0)
         startActivity(new Intent(getActivity(),home.class));
          else if(position==1)
-             startActivity(new Intent(getActivity(),profile.class));
-        else if(position==2)
              startActivity(new Intent(getActivity(),contests.class));
+        else if(position==2)
+             startActivity(new Intent(getActivity(),question.class));
          else if(position==3)
-             startActivity(new Intent(getActivity(),Notifications.class));
+             startActivity(new Intent(getActivity(),profile.class));
          else if(position==4)
              startActivity(new Intent(getActivity(),credits.class));
          else if(position==5)

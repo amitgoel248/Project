@@ -9,7 +9,8 @@
     <string name="drawer_close">Close</string>
     <string name="title_activity_home">Levels</string>
     <string name="title_activity_contests">Contests</string>
-    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_profile">Todo List</string>
+    <string name="title_activity_profile2">Solved</string>
     <string name="title_activity_tips">Question of The Day</string>
     <string name="title_activity_developers">Developers</string>
     <string name="title_activity_about">Credits</string>
@@ -20,10 +21,9 @@
     <string name="year">2nd Year</string>
     <string name="ty">Thank You.</string>
     <string name="sp">Special Thanks to</string>
-    <string name="tb">Team Technobyte</string>
+    <string name="tb">Techspardha</string>
     <string name="ty_text">We would like to thank the following websites for extending their support to us.</string>
-    <string name="tips">
-*Every Morning you will get a notification popup which will help you develop a new concept in the world of programming.\n
+    <string name="tips">*Every Morning you will get a notification popup which will help you develop a new concept in the world of programming.\n
         *With these tips you will get to develop some extra skills that you might not get anywhere else.</string>
     <string name="tip">Tips:-</string>
     <string name="contests_notify">*Along with the tips you will get information regarding the contests on that day.</string>
@@ -31,10 +31,7 @@
     <string name="allow">Allow Them</string>
     <string name="maintext">Description:\n\nThe aim of this app is to help beginners know the basics required to get comfortable with competitive programming. When a person starts competitive programming, he generally gets confused from where to start, thats where the role of this app comes.
 The questions are divided in 12 parts, each focussing on a particular skillset required for a good programmer to know. To help new budding hackers :p , we have included a daily pop-up reminder which will give them a question sorted in a particular order to get them on the track.\n\nDaily a pop will come at 9:00 am, user can enable and disable the pop-up notifications with the buttons provided below.</string>
-
-
-
-     <string name="intro_message">Welcome to <b>Scheduler</b>!
+    <string name="intro_message">Welcome to <b>Scheduler</b>!
         This sample demonstrates how you can schedule an alarm that causes a service to
         be started. This is useful when you want to schedule alarms that initiate
         long-running operations. Click START ALARM to activate an alarm to check
@@ -52,8 +49,7 @@ The questions are divided in 12 parts, each focussing on a particular skillset r
     <string name="noq">Number Of Questions Seen:-</string>
     <string name="o">0</string>
     <string name="lp">Lets Start Playing...</string>
-    <string name="main">
-There are many platforms available for you to learn, improve and develop your coding skills.\n\n
+    <string name="main">There are many platforms available for you to learn, improve and develop your coding skills.\n\n
 To get you started with, there is:\n\n
 1.) CodeChef ( a Directi initiative ) which holds monthly 3 contests:\n\n
 	\t\ta) Long Challenge\n
@@ -64,11 +60,14 @@ To get you started with, there is:\n\n
 3.) SPOJ which have a vast number of good problems to deal with.\n\n
 4.) TopCoder where you can earn also :P\n\n
 
-Links can be found in credits......\n\n</string>
+Links are available below.\n\n</string>
     <string name="up2">Its up to You...</string>
     <string name="save">save</string>
-    <string name="qod">To view Today\'s Question press Enter</string>
-    <string name="qod2">Question\'s CODE is</string>
+    <string name="qod">Question of the Day</string>
+    <string name="qod2">Question\'s Code is</string>
     <string name="link">Link is:-</string>
+    <string name="title_activity_question">question</string>
+    <string name="title_activity_todo">todo</string>
+    <string name="title_activity_solved">solved</string>
 
 </resources>

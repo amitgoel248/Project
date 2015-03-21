@@ -8,46 +8,42 @@
     <include
         android:id="@+id/app_bar"
         layout="@layout/app_bar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:background="@drawable/bacj">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <TextView
         android:id="@+id/gtx"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_below="@id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/qod"
         android:gravity="center"
-        android:textSize="30dp"
-        android:textStyle="italic"
+        android:textSize="25dp"
         android:textColor="#000000"/>
-    <Button
-        android:id="@+id/btn"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/gtx"
-        android:text="Enter"
-        android:onClick="viewDetails"
-        />
-
     <TextView
         android:textColor="#000000"
         android:id="@+id/gtx2"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_below="@id/btn"
+        android:layout_below="@id/gtx"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/qod2"
-        android:textSize="30dp"
-        android:textStyle="italic"/>
+        android:textSize="25dp"/>
 
     <TextView
         android:textColor="#000000"
-        android:textSize="25dp"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/jaja"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/gtx2"
         />
@@ -61,17 +57,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/link"
-        android:textSize="30dp"
-        android:textStyle="italic"/>
+        android:textSize="25dp"
+        />
 
     <TextView
-        android:textColor="#000000"
-        android:textSize="25dp"
+        android:textColor="#303F9F"
+        android:textSize="18dp"
         android:layout_marginLeft="20dp"
         android:id="@+id/jajaja"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/gtx3"
         />
+
+
+            <TextView
+                android:textColor="#000000"
+                android:id="@+id/gtx4"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/jajaja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Question is:-"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/jajajaja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gtx4"
+                />
+
+
+        </RelativeLayout>
+       ></ScrollView>
 
 </RelativeLayout>

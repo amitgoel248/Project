@@ -1,45 +1,45 @@
 package com.project.amit.project;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class profile extends ActionBarActivity {
+public class tips extends ActionBarActivity {
 
-    DbaseAdapter dbasehelper;
-    DbaseAdapter.Dbasehelper helper;
+
+    DbaseAdapter2 dbasehelper;
+    DbaseAdapter2.Dbasehelper helper;
     public static int value=0;
-    public static int i=1;
+
+
+    public void viewDetails(View view) {
+        int i = 1;
+        int counter = getvalue();
+        while (counter != 0) {
+            counter--;
+            i++;
+        }
+        String data = dbasehelper.getData(i);
+        TextView et = (TextView) findViewById(R.id.tipstext);
+        et.setText(data);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-        Toolbar toolbar=(Toolbar)findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        setContentView(R.layout.activity_tips);
 
-        dbasehelper =new DbaseAdapter(this);
-        helper =new DbaseAdapter.Dbasehelper(this);
+        dbasehelper = new DbaseAdapter2(this);
+        helper = new DbaseAdapter2.Dbasehelper(this);
         try {
             helper.createDataBase();
         } catch (IOException e) {
@@ -50,25 +50,32 @@ public class profile extends ActionBarActivity {
         } catch (SQLException e) {
             //
         }
-        TextView et = (TextView)findViewById(R.id.ig);
-        for(int k=0;k<question.l;k++)
-        {
-            String data = dbasehelper.getData(question.pica[k]);
-            et.append(data);
-            et.append("\n");
-        }
 
+        viewDetails(null);
+
+        Button bt=(Button)findViewById(R.id.go);
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(tips.this , MainActivity.class));
+            }
+        });
     }
+
     protected void onResume() {
         super.onResume();
         value++;
     }
 
+    public int getvalue()
+    {
+        return value;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_profile, menu);
+        getMenuInflater().inflate(R.menu.menu_tips, menu);
         return true;
     }
 
@@ -80,11 +87,9 @@ public class profile extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if(id==android.R.id.home)
-        {
-            NavUtils.navigateUpFromSameTask(this);
+        if (id == R.id.action_settings) {
+            return true;
         }
-
 
         return super.onOptionsItemSelected(item);
     }

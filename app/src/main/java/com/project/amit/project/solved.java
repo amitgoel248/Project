@@ -22,12 +22,12 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class profile extends ActionBarActivity {
+public class solved extends ActionBarActivity {
 
     DbaseAdapter dbasehelper;
     DbaseAdapter.Dbasehelper helper;
     public static int value=0;
-    public static int i=1;
+    public static int i=2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +50,10 @@ public class profile extends ActionBarActivity {
         } catch (SQLException e) {
             //
         }
-        TextView et = (TextView)findViewById(R.id.ig);
-        for(int k=0;k<question.l;k++)
+        TextView et = (TextView)findViewById(R.id.ig2);
+        for(int k=0;k<question.l2;k++)
         {
-            String data = dbasehelper.getData(question.pica[k]);
+            String data = dbasehelper.getData(question.pica2[k]);
             et.append(data);
             et.append("\n");
         }
